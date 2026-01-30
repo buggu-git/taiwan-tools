@@ -1,0 +1,30 @@
+# Taiwan ETF Holdings Tracker - Working URLs
+database:
+  host: "localhost"
+  port: 5432
+  name: "taiwan_etf_db"
+  user: "postgres"
+  password: "${DB_PASSWORD}"
+
+etfs:
+  # Yuanta ETF holdings URLs (working)
+  - symbol: "00919"
+    name: "中信金"
+    provider: "yuanta"
+    type: "High Dividend"
+    url: "https://www.yuantaetfs.com/zh-Hant/Products/ETF/Holdings/00919"
+    
+  - symbol: "00929"
+    name: "富邦科技"
+    provider: "fubon"  
+    type: "Technology"
+    url: "https://www.fubon.com/etf/00929"
+    
+  - symbol: "00900"
+    name: "富邦ESG"
+    provider: "fubon"
+    type: "ESG"
+    url: "https://www.fubon.com/etf/00900"
+
+schedule:
+  daily_fetch: "08:00 Asia/Taipei"
